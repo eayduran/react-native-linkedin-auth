@@ -1,10 +1,12 @@
 # react-native-linkedin-auth
 
 
-to use this app you need to follow these(for npm):
+You can use the LinkedInModal after installing:
 
-npm install
+https://www.npmjs.com/package/react-native-linkedin
 
-then you can run:
+and 
 
-npm run ios
+https://www.npmjs.com/package/react-native-webview
+
+

@@ -1,11 +1,17 @@
-import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import React, {useState, useRef} from 'react';
+import { SafeAreaView, Text, Button } from 'react-native';
 import LinkedInModal from 'react-native-linkedin';
 const App = () => {
-
+  // After the set modalvisibility, page needs to reload to see modal
+  const [reloadpage, setReloadpage] = useState()
+  
+  // To use linkedinmodal with a button
+  const linkedinRef = useRef(null) 
+  
   return(
     <SafeAreaView style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <LinkedInModal 
+          ref={linkedinRef}
           clientID= {YOUR CLIENT ID}
           clientSecret= {YOUR CLIENT SECRET}
           redirectUri= "http://localhost:8081/auth/linkedin/callback"
@@ -24,6 +30,14 @@ const App = () => {
                 namereq.send();
             }
           }
+      />
+
+      <Button
+        onPress={()=>{
+          linkedinRef.current.state.modalVisible = true
+          setReloadpage("Refresh page to see modal")
+        }
+        title="Trigger Linkedin"
       />
     </SafeAreaView>
   );

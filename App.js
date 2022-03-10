@@ -2,6 +2,7 @@ import React, {useState, useRef} from 'react';
 import { SafeAreaView, Text, Button } from 'react-native';
 import LinkedInModal from 'react-native-linkedin';
 const App = () => {
+  
   // After the set modalvisibility, page needs to reload to see modal
   const [reloadpage, setReloadpage] = useState()
   

@@ -1,4 +1,4 @@
-# React Native Linkedin
+# React Native Linkedin Auth
 
 Watch the video of this repo: https://www.youtube.com/watch?v=qSQ4tCrc-OA
 
